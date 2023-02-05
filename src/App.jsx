@@ -9,7 +9,9 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Box Generator</h1>
       <BoxForm boxList={boxList} setBoxList={setBoxList}/>
+      <DisplayBoxes boxList={boxList} />
     </div>
   );
 }

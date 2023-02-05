@@ -11,7 +11,6 @@ const BoxForm = (props) => {
 
     const handleColorChange = (e) => {
         setBox(prevBoxState => ({...prevBoxState, [e.target.name]: e.target.value}))
-        console.log(e.target.value)
     }
 
     const validateColor = () => {
@@ -46,7 +45,7 @@ const BoxForm = (props) => {
         <div className="boxForm">
             <form onSubmit={createBox}>
                 <div className="form-group">
-                    <label htmlFor="color"></label>
+                    <label htmlFor="color">Box Color: </label>
                     <input type="text" name="color" onChange={handleColorChange} value={box.color} />
                     {
                         box.color.length > 0 && box.color.length < 3 ?
@@ -54,7 +53,7 @@ const BoxForm = (props) => {
                         :null
                     }
                 </div>
-                <button>Add Color</button>
+                <button>Add Box</button>
             </form>
         </div>
     )
